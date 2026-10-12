@@ -27,6 +27,5 @@ Despite these successes, Standard XCS operates on a flat, Markovian representati
 structure. Two consequences follow. First, convergence is slow, particularly under sparse rewards, because the agent must discover the goal through undirected exploration. Second, the rule-base grows to include many locationspecific classifiers, each applicable to a single cell, thereby undermining the generalization that is the hallmark of LCS.
 
 The central premise of this work is that topological structure should be an explicit part of the classifier’s hypothesis space, not merely an implicit property of the environment. We propose Graph-XCS, an architecture that models the environment as a graph G = (V, E), where V denotes navigable cells and E denotes valid transitions.
-This graph is used in two distinct ways: (i) to augment classifier conditions with graph-theoretic features,
-enabling generalization across topologically equivalent
-states, and (ii) to bias action selection through a distanceto-goal heuristic, accelerating early exploration.
+This graph is used in two distinct ways: (i) to augment classifier conditions with graph-theoretic features,
+enabling generalization across topologically equivalent states, and (ii) to bias action selection through a distance to-goal heuristic, accelerating early exploration.
