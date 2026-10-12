@@ -12,7 +12,7 @@ Navigation in static, discrete environments remains a foundational benchmark in 
 XCS in a 10×10 maze environment. To isolate the contribution of each mechanism, we evaluate three ablations: (i) graph
 features without heuristic bias (β = 1), (ii) heuristic bias with raw state (β < 1), and (iii) the full Graph-XCS. Results across
 [insert N] independent runs demonstrate that Graph-XCS reduces steps-to-goal by [insert metric, e.g., 73%] during early
-learning and stabilizes at a rule-base approximately [insert metric, e.g., 67%] smaller than Standard XCS. Critically, ablations
+learning and stabilizes at a rule-base approximately [insert metric, e.g., 67%] smaller than Standard XCS. Critically, ablations
 reveal that the heuristic bias drives rapid early convergence, whereas graph-based state representation is responsible for
 long-term rule compactness. We further show that GraphXCS generalizes to a structurally distinct test maze without
 retraining, whereas Standard XCS requires re-learning. These findings establish topological priors as a principled inductive
@@ -20,7 +20,7 @@ bias for LCS in structured environments.
 
 Index Terms—Learning Classifier Systems, XCS, Graph Neural Networks, Reinforcement Learning, Maze Navigation, Inductive Bias
 I. Introduction Learning Classifier Systems (LCS) are evolutionary rulebased learners that combine reinforcement learning with
-a genetic algorithm to evolve a population of conditionaction rules [1], [2]. The eXtended Classifier System
+a genetic algorithm to evolve a population of condition action rules [1], [2]. The eXtended Classifier System
 (XCS) [2], [3] advanced this paradigm by introducing accuracy-based fitness, thereby promoting classifiers that
 are both accurate and maximally general. XCS has since become a standard benchmark for rule-based RL and has been successfully applied to data mining, function approximation, and autonomous agent control [4], [5].
 Despite these successes, Standard XCS operates on a flat, Markovian representation of state in which each grid cell is treated as an independent entity. In spatially structured environments—such as a 10 × 10 maze—this design is fundamentally limiting. The agent must learn the value of each state-action pair in isolation, unable to exploit the topological relationships (connectivity, distance to-goal, obstacle adjacency) that define the problem’s
